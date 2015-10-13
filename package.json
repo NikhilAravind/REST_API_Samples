@@ -1,0 +1,16 @@
+{
+  "name": "MySite",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "3.0.0alpha4",
+    "node-restful": "*",
+    "mongoose": "3.8",
+    "jade": "*",
+    "nib": "*",
+    "monk": "*",
+    "stylus": "*"
+    
+  }
+}

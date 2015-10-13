@@ -1,0 +1,23 @@
+- var arr= options;
+
+br
+p.
+	Survey page: #{pageNumber} for user #{username}
+p.
+	#{ question}
+
+form(method="GET", action="/surveyAnswer")
+	input(type="hidden", name="pageNumber", value="#{pageNumber}")
+	input(type="hidden", name="username", value="#{username}")
+	- for (var i=0; i<arr.length; i++)
+		input(type="radio", name="answer", value=arr[i], checked='#{answerGiven}'==arr[i])
+		label= arr[i]
+	&nbsp
+	&nbsp
+	if pageNumber != 1
+		input#submit(type="submit", name="button", value="Previous")
+	&nbsp
+	&nbsp
+	input#submit(type="submit", name="button", value="Next")
+	
+	

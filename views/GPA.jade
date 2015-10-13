@@ -1,0 +1,22 @@
+br
+p.
+	Survey page: #{pageNumber} for user #{username}
+p.
+	Enter the GPA of your potential partner
+
+form(method="GET", action="/surveyAnswer")
+	input(type="hidden", name="pageNumber", value="#{pageNumber}")
+	input(type="hidden", name="username", value="#{username}")
+	&nbsp
+	&nbsp
+	input(type="text" name="answer" value="#{answerGiven}")
+	&nbsp
+	&nbsp
+	input#submit(type="submit", name="button", value="Previous")
+	&nbsp
+	&nbsp
+	input#submit(type="submit", name="button", value="Next")
+	&nbsp
+	&nbsp
+	p.
+		#{errorMessage}
